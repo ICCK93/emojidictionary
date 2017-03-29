@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="T5Q-TJ-72R">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Emoji_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Emoji_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -34,17 +34,20 @@
                             <constraint firstItem="iHa-vK-gXU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ysD-gB-i8G"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7DU-oB-qOc"/>
                     <connections>
                         <outlet property="EmojiTableview" destination="iHa-vK-gXU" id="g5D-2u-Xtl"/>
+                        <segue destination="fxy-aH-u9u" kind="show" identifier="moveScreens" id="sI9-ww-dPp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1136.25" y="135.21126760563379"/>
         </scene>
-        <!--View Controller-->
+        <!--Definition View Controller-->
         <scene sceneID="OTS-CP-IRS">
             <objects>
-                <viewController id="fxy-aH-u9u" sceneMemberID="viewController">
+                <viewController id="fxy-aH-u9u" customClass="DefinitionViewController" customModule="Emoji_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Be-Id-bp9"/>
                         <viewControllerLayoutGuide type="bottom" id="UIL-sM-bEm"/>
@@ -53,14 +56,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqk-vt-eAi">
-                                <rect key="frame" x="51" y="60" width="218" height="239"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👵🏼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqk-vt-eAi">
+                                <rect key="frame" x="51" y="104" width="218" height="239"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO1-PS-ky3">
-                                <rect key="frame" x="100" y="344" width="120" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FC Je Moeder Belde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO1-PS-ky3">
+                                <rect key="frame" x="83" y="388" width="155" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -68,16 +71,38 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JO1-PS-ky3" firstAttribute="centerX" secondItem="aZn-3d-bC7" secondAttribute="centerX" id="5DN-g6-GV4"/>
-                            <constraint firstItem="Jqk-vt-eAi" firstAttribute="centerX" secondItem="aZn-3d-bC7" secondAttribute="centerX" id="HrM-Bu-Ge9"/>
-                            <constraint firstItem="JO1-PS-ky3" firstAttribute="top" secondItem="Jqk-vt-eAi" secondAttribute="bottom" constant="45" id="aWY-bW-1Xf"/>
-                            <constraint firstItem="Jqk-vt-eAi" firstAttribute="top" secondItem="1Be-Id-bp9" secondAttribute="bottom" constant="40" id="w1h-0h-mX8"/>
+                            <constraint firstItem="Jqk-vt-eAi" firstAttribute="top" secondItem="1Be-Id-bp9" secondAttribute="bottom" constant="40" id="LJa-dg-BhU"/>
+                            <constraint firstItem="Jqk-vt-eAi" firstAttribute="centerX" secondItem="aZn-3d-bC7" secondAttribute="centerX" id="P63-ih-oF8"/>
+                            <constraint firstItem="JO1-PS-ky3" firstAttribute="top" secondItem="Jqk-vt-eAi" secondAttribute="bottom" constant="45" id="Txq-6Q-3BL"/>
+                            <constraint firstItem="Jqk-vt-eAi" firstAttribute="centerX" secondItem="JO1-PS-ky3" secondAttribute="centerX" id="lhh-dW-jnC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="definitionLabel" destination="JO1-PS-ky3" id="jqv-Em-XwC"/>
+                        <outlet property="emojiLabel" destination="Jqk-vt-eAi" id="czA-Gh-903"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOA-Gj-pfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018" y="156"/>
+            <point key="canvasLocation" x="2011.875" y="134.1549295774648"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0fn-eK-awU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T5Q-TJ-72R" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CUK-c9-570">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yp0-wm-X3O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cvd-bH-RKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="336" y="134"/>
         </scene>
     </scenes>
 </document>
